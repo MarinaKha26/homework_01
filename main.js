@@ -4,3 +4,5 @@ result_age = Number(result_age)
 const year = 2023
 user_age = year - result_age
 
+let result_name = prompt('What is your name?')
+
