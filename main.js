@@ -38,7 +38,7 @@ if (day >= 20 && month === 1 || day <=18 && month === 2){
     } else {
     astrologicalZodiac = ('Data entry error')
     }
-    
+
 let leapOrNon;
 if ( userYear % 4 === 0 && userYear % 100 === 0 && userYear % 400 === 0 ){
     leapOrNon = ('(leap year)')
@@ -49,3 +49,5 @@ if ( userYear % 4 === 0 && userYear % 100 === 0 && userYear % 400 === 0 ){
     } else {
         leapOrNon = ('')
     }
+
+document.write(`User Bio: ${name} ${surname}, ${age} years old ${leapOrNon}, ${astrologicalZodiac};`)
