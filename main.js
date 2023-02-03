@@ -35,6 +35,17 @@ if (day >= 20 && month === 1 || day <=18 && month === 2){
     astrologicalZodiac = ('Sagittarius')
     }else if (day >= 22 && month === 12 || day <=19 && month === 1){
     astrologicalZodiac = ('Capricorn')
-    } else 
+    } else {
     astrologicalZodiac = ('Data entry error')
-
+    }
+    
+let leapOrNon;
+if ( userYear % 4 === 0 && userYear % 100 === 0 && userYear % 400 === 0 ){
+    leapOrNon = ('(leap year)')
+    } else if (userYear % 4 === 0 && userYear % 100 === 0){
+        leapOrNon = ('')
+    } else if (userYear % 4 === 0 ){
+        leapOrNon = (' (leap year)')
+    } else {
+        leapOrNon = ('')
+    }
