@@ -4,3 +4,5 @@ let surname = prompt('What is your surname?')
 
 let day = +prompt('What day were you born?')
 
+let month = +prompt('What month were you born?')
+
