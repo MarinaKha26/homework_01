@@ -49,4 +49,9 @@ while(countTries > 0)
         errors = errors + ('\n password must contain at least 4 and no more than 12 characters')
     }
 
+    countTries = countTries - 1
+
+    if ((errors) && (countTries > 0)){
+        alert(`Please fix next: ${errors}. \n You have ${countTries} tries`)
+    }
 }
