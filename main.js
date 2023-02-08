@@ -55,5 +55,8 @@ while(countTries > 0)
         alert(`Please fix next: ${errors}. \n You have ${countTries} tries`)
     }else if (errors){
         alert(`Sorry, you don't have more tries`)
+    }else{
+        document.write(`Your account successfully registered! <pre> email:${email} </pre> <pre> password:${password} </pre>`)
+        break 
     }
 }
