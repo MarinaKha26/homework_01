@@ -7,31 +7,31 @@ while(countTries > 0)
 
     if (email.startsWith(" ") || email.startsWith('@')){
         errors = errors + ('\n your email must start without "@" and space ')
-    }else{
+    }else {
         correct=('')
     }
 
     if (email.endsWith(" ") || email.endsWith('@')){
         errors =  errors + ('\n your email must end without "@" and space ')
-    }else{
+    }else {
         correct=('')
     }
 
     if (email.includes('@')){
         correct=('')
-    }else{
+    }else {
         errors =  errors + ('\n your email must includes "@"')
     }
 
     if (email.length <= 15 ){
         correct=('')
-    } else{
+    } else {
         errors =  errors + ('\n you email must be up to 15 characters long')
     }
 
     if (email.endsWith('.com')){
         correct=('')
-    } else{
+    } else {
         errors =  errors + ('\n your email must end with ".com')
     }
 
@@ -45,7 +45,7 @@ while(countTries > 0)
 
     if ((password.length >=4) && (password.length <=12)){
         correct=('')
-    }else{
+    }else {
         errors = errors + ('\n password must contain at least 4 and no more than 12 characters')
     }
 
@@ -53,5 +53,7 @@ while(countTries > 0)
 
     if ((errors) && (countTries > 0)){
         alert(`Please fix next: ${errors}. \n You have ${countTries} tries`)
+    }else if (errors){
+        alert(`Sorry, you don't have more tries`)
     }
 }
