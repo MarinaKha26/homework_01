@@ -35,5 +35,18 @@ while(countTries > 0)
         errors =  errors + ('\n your email must end with ".com')
     }
 
+    let password = prompt('Created password')
+
+    if (password != password.toLowerCase()){
+        correct=('')
+    } else {
+        errors = errors + ('\n your password must includ calital letters')
+    }
+
+    if ((password.length >=4) && (password.length <=12)){
+        correct=('')
+    }else{
+        errors = errors + ('\n password must contain at least 4 and no more than 12 characters')
+    }
 
 }
