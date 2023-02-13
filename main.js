@@ -11,3 +11,6 @@ let newArr = []
  for ( let i = 0; i < userValue; i++){
         newArr[i] = Math.round(Math.random()*10)
 } console.log(newArr)
+
+let result = newArr.reduce((acc, curr) => acc * curr);
+console.log(result)
