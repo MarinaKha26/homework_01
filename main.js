@@ -30,3 +30,9 @@ for (let i = 0; i < numbersArray.length; i++){
         amountNegativEl += 1
    }
 }
+
+for (let i = 0; i < numbersArrayOriginal.length; i++){
+    if (numbersArrayOriginal[i] != maxEl){
+        numbersArrayOriginal[i] = 0
+    }
+}
