@@ -36,3 +36,6 @@ for (let i = 0; i < numbersArrayOriginal.length; i++){
         numbersArrayOriginal[i] = 0
     }
 }
+
+document.write(`minimum element in array is ${minEl} with index ${minElId} <br> maximum element in array is ${maxEl} with index ${maxElId} <br>sum of positive elements ${sumPositivEl} <br> amount of positive elements ${amountPositivEl} <br> amount of negative elements ${amountNegativEl} <br> amount of even positive elements ${amountEvenPosEl} <br> amount of odd positive elements ${amountOddPosEl} <br> sum of even positive elements ${sumEvenPosEl} <br> sum of odd positive elements ${sumOddPosEl} <br> result multiplication positive elements ${resultMultipPositivEl}
+<br> is the largest element in the array with another elements values 0 ${numbersArrayOriginal}`)
