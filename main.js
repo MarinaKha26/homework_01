@@ -6,3 +6,27 @@ let minEl = sortedArr[0]
 let maxEl = sortedArr[sortedArr.length-1]
 let minElId = numbersArrayOriginal.indexOf(minEl)
 let maxElId = numbersArrayOriginal.indexOf(maxEl)
+
+let sumPositivEl  = 0
+let amountPositivEl = 0
+let amountEvenPosEl =  0
+let sumEvenPosEl = 0
+let amountOddPosEl = 0
+let sumOddPosEl = 0
+let amountNegativEl = 0
+let resultMultipPositivEl = 1
+for (let i = 0; i < numbersArray.length; i++){
+   if (numbersArray[i] > 0){
+        sumPositivEl += numbersArray[i];
+        amountPositivEl += 1
+        resultMultipPositivEl *=  numbersArray[i]
+   }if (((numbersArray[i] > 0)) && ((numbersArray[i] % 2 === 0))){
+        amountEvenPosEl +=1
+        sumEvenPosEl += numbersArray[i]
+   }if (((numbersArray[i] > 0)) && ((numbersArray[i] % 2 != 0))){
+        amountOddPosEl +=1
+        sumOddPosEl += numbersArray[i]
+   }if(numbersArray[i] < 0){
+        amountNegativEl += 1
+   }
+}
