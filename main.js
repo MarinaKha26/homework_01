@@ -47,3 +47,11 @@ function getInfo(arr, arrHeader){
 
 	return tbl
 }
+
+let resultAnim = getInfo(animals,`Animals info`)
+let resultFood = getInfo(food,`Food info`)
+let resultUniv = getInfo(universes,`Universes info`)
+
+document.body.appendChild(resultAnim);
+document.body.appendChild(resultFood);
+document.body.appendChild(resultUniv);
