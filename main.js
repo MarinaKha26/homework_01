@@ -15,3 +15,45 @@ function mean(arr){
 mean(arr)
 document.write(`1. Mean of array ${meanArray}`)
 //
+
+//Part 2//
+let firstUserNumb = +prompt('Enter the first number')
+let mathSings = prompt('Enter the mathematical sign')
+let secondUserNumb = +prompt('Enter the second number')
+let result = 0
+function doMath(a,b,c){
+    switch(b) {
+        case '+':
+             result = firstUserNumb + secondUserNumb
+            break
+    
+        case '-':
+             result = firstUserNumb - secondUserNumb
+            break
+    
+        case '*':
+             result = firstUserNumb * secondUserNumb
+            break
+    
+        case '/':
+             result = firstUserNumb / secondUserNumb
+            break
+
+         case '%':
+            result = firstUserNumb % secondUserNumb
+            break
+            
+        case '^':
+            result = firstUserNumb ** secondUserNumb
+            break
+
+        default:
+            alert('Please write only number or mathematical sign');
+            break
+        }
+        return result
+    }
+
+doMath(firstUserNumb,mathSings,secondUserNumb)
+document.write(`<br> 2. Result of mathematical operations ${result}`)
+//
