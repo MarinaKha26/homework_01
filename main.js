@@ -101,3 +101,25 @@ document.write(`<br> 3. two-dimensional array <br> [`)
 document.body.appendChild(createTable(resultNewArr))
 document.write(`]`)
 //
+
+//Part 4//
+let userStr = prompt('Write your string').toLowerCase()
+let  userSym = prompt('Write letter which we need deleted').toLowerCase()
+
+function deleteSym(str, ...sym) {
+  const symStr = sym.filter(sym => typeof sym != 'function' )
+  const symFunc = sym.filter(sym => typeof sym === 'function')
+    symStr.forEach((sym) => {
+        str = str.replaceAll(sym, '')
+    })
+
+     symFunc.forEach(symFunc =>{
+        str = symFunc(str)
+    })
+
+    return str
+}
+
+let changeStr = deleteSym(userStr,...userSym,(a) => a.toUpperCase())
+document.write(`<br> 4. ${changeStr}`)
+//
