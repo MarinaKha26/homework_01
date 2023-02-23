@@ -57,3 +57,47 @@ function doMath(a,b,c){
 doMath(firstUserNumb,mathSings,secondUserNumb)
 document.write(`<br> 2. Result of mathematical operations ${result}`)
 //
+
+//Part 3//
+let userLengthMainArr = +prompt('Enter the length of the first array')
+let userLengthNestedArr = +prompt('Enter the length of the second array')
+let userValueArr = +prompt('Enter the value of the array') 
+
+let  table = document.createElement('table')
+let tBody = document.createElement('tbody')
+
+function createArr(a,b,c){
+    let nestedArr = []
+    let mainArr = []
+    for ( let i = 0; i < a; i++){
+       nestedArr[i] = c
+    }
+    for (let i = 0; i < b; i++){
+        mainArr[i] = nestedArr
+    }
+
+   return mainArr
+
+}
+
+let resultNewArr = createArr(userLengthNestedArr,userLengthMainArr,userValueArr)
+
+function createTable(arr){
+    for(i = 0; i <  resultNewArr.length; i++){
+        let row = document.createElement('tr')
+        for(j = 0; j < resultNewArr[i].length; j++){
+        let cell = document.createElement('td')
+        let cellText = document.createTextNode(resultNewArr[i][j])
+        cell.appendChild(cellText)
+        row.appendChild(cell)
+        }
+     tBody.appendChild(row)
+     table.appendChild(tBody)
+    }
+    return table
+}
+
+document.write(`<br> 3. two-dimensional array <br> [`)
+document.body.appendChild(createTable(resultNewArr))
+document.write(`]`)
+//
