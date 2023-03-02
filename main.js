@@ -54,3 +54,5 @@ function checkApplicant(name,position,salary) {
     document.write(`${name}, you have significant skills at ${position} but we hired another developer, let's keep contact !`)
   
 }
+
+checkApplicant(userName, userPosition, userSalary)
