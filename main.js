@@ -8,3 +8,8 @@ class Topping {
     static TOPPING_SPICE = {name: 'TOPPING_SPICE', price: 15, calories: 0}
     static TOPPING_MAYO = {name: 'TOPPING_MAYO', price: 20, calories: 5}
 }
+
+class Size {
+    static SIZE_SMALL = {name: 'SIZE_SMALL', price: 50, calories: 20}
+    static  SIZE_BIG = {name: 'SIZE_BIG', price: 100, calories: 40}
+}
