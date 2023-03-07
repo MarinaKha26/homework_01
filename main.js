@@ -13,3 +13,14 @@ class Size {
     static SIZE_SMALL = {name: 'SIZE_SMALL', price: 50, calories: 20}
     static  SIZE_BIG = {name: 'SIZE_BIG', price: 100, calories: 40}
 }
+
+class Hamburger{
+    #toppings
+    #size
+    #stuffing
+    constructor(size, stuffing, topping){
+        this.#size = size;
+        this.#stuffing = stuffing;
+        this.#toppings = topping ? [topping] : []
+    }
+}
