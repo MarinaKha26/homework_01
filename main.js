@@ -23,4 +23,26 @@ class Hamburger{
         this.#stuffing = stuffing;
         this.#toppings = topping ? [topping] : []
     }
+    
+    addTopping(topping){
+        this.#toppings.push(topping)
+    }
+
+    get toppings (){
+        let toppingName = ''
+        this.#toppings.forEach(el => toppingName += el['name'] + ' ')
+        return console.log('Selected toppings :'+ toppingName)
+    }
+
+    calculateCalories(){
+        let  toppingsCalories = 0
+        this.#toppings.forEach(el => toppingsCalories += el['calories'])
+        return this.#size.calories + this.#stuffing.calories + toppingsCalories
+    }
+
+    calculatePrice(){
+        let toppingsPrice = 0
+        this.#toppings.forEach(el => toppingsPrice += el['price'])
+        return  this.#size.price + this.#stuffing.price + toppingsPrice
+    }
 }
