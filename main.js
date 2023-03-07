@@ -23,7 +23,7 @@ class Hamburger{
         this.#stuffing = stuffing;
         this.#toppings = topping ? [topping] : []
     }
-    
+
     addTopping(topping){
         this.#toppings.push(topping)
     }
@@ -46,3 +46,11 @@ class Hamburger{
         return  this.#size.price + this.#stuffing.price + toppingsPrice
     }
 }
+
+const hamburger = new Hamburger(Size.SIZE_SMALL, Stuffing.STUFFING_CHEESE)
+hamburger.addTopping(Topping.TOPPING_MAYO)
+console.log(`Calories:` + hamburger.calculateCalories())
+console.log(`Price:` + hamburger.calculatePrice())
+hamburger.addTopping(Topping.TOPPING_SPICE)
+console.log(`Price:` + hamburger.calculatePrice())
+console.log(hamburger.toppings)
