@@ -7,6 +7,89 @@
     <title>Document</title>
 </head>
 <body>
+    <div id="block">
+        <form id="order-form">
+        <fieldset>
+            <legend>Please,write your name</legend>
+            <input type="text" id="user-name" required></input>
+        </fieldset>
     
+        <fieldset>
+            <legend>Size</legend>
+            <select name="burger-size" id="burger-size" required>
+                <option value="">-- Select size --</option>
+                <option value="SIZE_SMALL">Small</option>
+                <option value="SIZE_BIG">Big</option> 
+            </select>     
+        </fieldset>
+    
+        <fieldset>
+            <legend>Stuffing</legend>
+            <input type="radio" value="STUFFING_CHEESE" name="stuffing" required>
+            Cheese
+            </input>
+            <input type="radio" value="STUFFING_SALAD" name="stuffing" required>
+            Salad
+            </input>
+            <input type="radio" value="STUFFING_POTATO" name="stuffing" required>
+            Potato
+            </input>
+        </fieldset>
+    
+        <fieldset>
+            <legend>Topping</legend>
+            <input type="checkbox"  value="TOPPING_SPICE" name="topping">
+            Spice
+            </input>
+            <input type="checkbox"  value="TOPPING_MAYO" name="topping" >
+            Mayo
+            </input>
+        </fieldset>
+    
+        <fieldset>
+            <legend>Order message</legend>
+            <textarea id="order-message" cols="30" rows="10" required></textarea>
+        </fieldset>
+        <button type="submit" id="button">Done</button>
+    </form>
+    </div>
+     <div id="message-container"></div>
+        <style>
+            body{
+                display: flex;
+                
+            }
+    
+            form {
+              max-width: 500px;
+              margin: 0 auto;
+              padding: 20px;
+              border: 2px solid #ccc;
+              border-radius: 10px;
+            }
+            
+            .order-message {
+                max-width: 500px;
+                margin: 20px auto;
+                padding: 20px;
+                border: 2px solid #ccc;
+                border-radius: 10px;
+            }
+    
+            #message-container {
+                display: flex;
+                flex-direction: column;
+                
+            } 
+    
+            .message-user {
+                max-width: 500px;
+                margin: 0 auto;
+                padding: 20px;
+                border: 2px solid #ccc;
+                border-radius: 10px;
+            } 
+        </style>
+    <script src="./main.js"></script>
 </body>
 </html>
